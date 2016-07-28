@@ -1,0 +1,6 @@
+framework module Pods_Natura {
+  umbrella header "Pods-Natura-umbrella.h"
+
+  export *
+  module * { export * }
+}

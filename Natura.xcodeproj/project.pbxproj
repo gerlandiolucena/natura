@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CDC12F91D48ABFA00843BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */; };
+		6CDC13021D48ABFA00843BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13001D48ABFA00843BF1 /* Main.storyboard */; };
+		6CDC13041D48ABFA00843BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13031D48ABFA00843BF1 /* Assets.xcassets */; };
+		6CDC13071D48ABFA00843BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13051D48ABFA00843BF1 /* LaunchScreen.storyboard */; };
+		6CDC13121D48ABFA00843BF1 /* NaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13111D48ABFA00843BF1 /* NaturaTests.swift */; };
+		6CDC131D1D48ABFA00843BF1 /* NaturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC131C1D48ABFA00843BF1 /* NaturaUITests.swift */; };
+		6CDC13321D48AC8D00843BF1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC132F1D48AC8D00843BF1 /* MapViewController.swift */; };
+		6CDC13341D48ADDF00843BF1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDC13331D48ADDF00843BF1 /* MapKit.framework */; };
+		6CDC133D1D48B5AB00843BF1 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC133B1D48B5AB00843BF1 /* APIKeys.swift */; };
+		6CDC133E1D48B5AB00843BF1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC133C1D48B5AB00843BF1 /* Endpoints.swift */; };
+		6CDC13421D48BA5E00843BF1 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13411D48BA5E00843BF1 /* RequestBase.swift */; };
+		6CDC13441D48BF5700843BF1 /* GPlacesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13431D48BF5600843BF1 /* GPlacesRequest.swift */; };
+		6CDC134B1D497FC300843BF1 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13471D497FC300843BF1 /* Convertible.swift */; };
+		6CDC134C1D497FC300843BF1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13481D497FC300843BF1 /* Errors.swift */; };
+		6CDC134D1D497FC300843BF1 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13491D497FC300843BF1 /* Mappable.swift */; };
+		6CDC134E1D497FC300843BF1 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC134A1D497FC300843BF1 /* Mapper.swift */; };
+		6CDC13501D49800300843BF1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC134F1D49800300843BF1 /* Location.swift */; };
+		6CDC13521D4980B100843BF1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13511D4980B100843BF1 /* Place.swift */; };
+		6CDC13551D49879400843BF1 /* NTAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13541D49879400843BF1 /* NTAnnotation.swift */; };
+		6CDC13571D49884900843BF1 /* NTAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13561D49884900843BF1 /* NTAnnotationView.swift */; };
+		6CDC13591D49F95D00843BF1 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13581D49F95D00843BF1 /* FacebookLogin.swift */; };
+		6CDC135B1D49FA0300843BF1 /* UserFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */; };
+		6CDC135D1D4A002900843BF1 /* AlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */; };
+		6CDC13611D4A030500843BF1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13601D4A030500843BF1 /* String+Extensions.swift */; };
+		6CDC13631D4A03CA00843BF1 /* NotificationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13621D4A03CA00843BF1 /* NotificationBase.swift */; };
+		6CDC13661D4A048400843BF1 /* AlertControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13651D4A048400843BF1 /* AlertControllerUtil.swift */; };
+		BD2B70A09ABC449563DBD591 /* Pods_Natura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A51775A2C76344327465E27 /* Pods_Natura.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CDC130E1D48ABFA00843BF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CDC12ED1D48ABFA00843BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CDC12F41D48ABFA00843BF1;
+			remoteInfo = Natura;
+		};
+		6CDC13191D48ABFA00843BF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CDC12ED1D48ABFA00843BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CDC12F41D48ABFA00843BF1;
+			remoteInfo = Natura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A51775A2C76344327465E27 /* Pods_Natura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Natura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4532DB84CB2112C55A00197B /* Pods-Natura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Natura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Natura/Pods-Natura.debug.xcconfig"; sourceTree = "<group>"; };
+		6CDC12F51D48ABFA00843BF1 /* Natura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CDC13011D48ABFA00843BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CDC13031D48ABFA00843BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CDC13061D48ABFA00843BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CDC13081D48ABFA00843BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CDC130D1D48ABFA00843BF1 /* NaturaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDC13111D48ABFA00843BF1 /* NaturaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaTests.swift; sourceTree = "<group>"; };
+		6CDC13131D48ABFA00843BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CDC13181D48ABFA00843BF1 /* NaturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDC131C1D48ABFA00843BF1 /* NaturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaUITests.swift; sourceTree = "<group>"; };
+		6CDC131E1D48ABFA00843BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CDC132F1D48AC8D00843BF1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6CDC13331D48ADDF00843BF1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6CDC133B1D48B5AB00843BF1 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIKeys.swift; path = Constants/APIKeys.swift; sourceTree = "<group>"; };
+		6CDC133C1D48B5AB00843BF1 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = Constants/Endpoints.swift; sourceTree = "<group>"; };
+		6CDC13411D48BA5E00843BF1 /* RequestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBase.swift; sourceTree = "<group>"; };
+		6CDC13431D48BF5600843BF1 /* GPlacesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPlacesRequest.swift; sourceTree = "<group>"; };
+		6CDC13471D497FC300843BF1 /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		6CDC13481D497FC300843BF1 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		6CDC13491D497FC300843BF1 /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		6CDC134A1D497FC300843BF1 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		6CDC134F1D49800300843BF1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6CDC13511D4980B100843BF1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		6CDC13541D49879400843BF1 /* NTAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAnnotation.swift; sourceTree = "<group>"; };
+		6CDC13561D49884900843BF1 /* NTAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAnnotationView.swift; sourceTree = "<group>"; };
+		6CDC13581D49F95D00843BF1 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
+		6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFacebook.swift; sourceTree = "<group>"; };
+		6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhoto.swift; sourceTree = "<group>"; };
+		6CDC13601D4A030500843BF1 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		6CDC13621D4A03CA00843BF1 /* NotificationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBase.swift; sourceTree = "<group>"; };
+		6CDC13651D4A048400843BF1 /* AlertControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerUtil.swift; sourceTree = "<group>"; };
+		CFDC0E98E383FC512E9B134E /* Pods-Natura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Natura.release.xcconfig"; path = "Pods/Target Support Files/Pods-Natura/Pods-Natura.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CDC12F21D48ABFA00843BF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDC13341D48ADDF00843BF1 /* MapKit.framework in Frameworks */,
+				BD2B70A09ABC449563DBD591 /* Pods_Natura.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC130A1D48ABFA00843BF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC13151D48ABFA00843BF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CDC12EC1D48ABFA00843BF1 = {
+			isa = PBXGroup;
+			children = (
+				6CDC12F71D48ABFA00843BF1 /* Natura */,
+				6CDC13351D48ADEE00843BF1 /* Frameworks */,
+				6CDC13101D48ABFA00843BF1 /* NaturaTests */,
+				6CDC131B1D48ABFA00843BF1 /* NaturaUITests */,
+				6CDC12F61D48ABFA00843BF1 /* Products */,
+				F67710D8300B821CF984B39C /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6CDC12F61D48ABFA00843BF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC12F51D48ABFA00843BF1 /* Natura.app */,
+				6CDC130D1D48ABFA00843BF1 /* NaturaTests.xctest */,
+				6CDC13181D48ABFA00843BF1 /* NaturaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CDC12F71D48ABFA00843BF1 /* Natura */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC135E1D4A02C400843BF1 /* Tools */,
+				6CDC13451D497F7900843BF1 /* Components */,
+				6CDC13401D48BA2200843BF1 /* Model */,
+				6CDC133F1D48BA0200843BF1 /* Request */,
+				6CDC13361D48B1D400843BF1 /* Constants */,
+				6CDC132C1D48AC3000843BF1 /* Controllers */,
+				6CDC132B1D48AC1B00843BF1 /* Resources */,
+				6CDC132A1D48AC0C00843BF1 /* Views */,
+				6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */,
+			);
+			path = Natura;
+			sourceTree = "<group>";
+		};
+		6CDC13101D48ABFA00843BF1 /* NaturaTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13111D48ABFA00843BF1 /* NaturaTests.swift */,
+				6CDC13131D48ABFA00843BF1 /* Info.plist */,
+			);
+			path = NaturaTests;
+			sourceTree = "<group>";
+		};
+		6CDC131B1D48ABFA00843BF1 /* NaturaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC131C1D48ABFA00843BF1 /* NaturaUITests.swift */,
+				6CDC131E1D48ABFA00843BF1 /* Info.plist */,
+			);
+			path = NaturaUITests;
+			sourceTree = "<group>";
+		};
+		6CDC132A1D48AC0C00843BF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13001D48ABFA00843BF1 /* Main.storyboard */,
+				6CDC13051D48ABFA00843BF1 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6CDC132B1D48AC1B00843BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13031D48ABFA00843BF1 /* Assets.xcassets */,
+				6CDC13081D48ABFA00843BF1 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6CDC132C1D48AC3000843BF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC132F1D48AC8D00843BF1 /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6CDC13351D48ADEE00843BF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13331D48ADDF00843BF1 /* MapKit.framework */,
+				3A51775A2C76344327465E27 /* Pods_Natura.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CDC13361D48B1D400843BF1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC133B1D48B5AB00843BF1 /* APIKeys.swift */,
+				6CDC133C1D48B5AB00843BF1 /* Endpoints.swift */,
+				6CDC13621D4A03CA00843BF1 /* NotificationBase.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		6CDC133F1D48BA0200843BF1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13411D48BA5E00843BF1 /* RequestBase.swift */,
+				6CDC13431D48BF5600843BF1 /* GPlacesRequest.swift */,
+				6CDC13581D49F95D00843BF1 /* FacebookLogin.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6CDC13401D48BA2200843BF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */,
+				6CDC134F1D49800300843BF1 /* Location.swift */,
+				6CDC13511D4980B100843BF1 /* Place.swift */,
+				6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CDC13451D497F7900843BF1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13531D49876300843BF1 /* Annotations */,
+				6CDC13461D497F9B00843BF1 /* Mapper */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6CDC13461D497F9B00843BF1 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13471D497FC300843BF1 /* Convertible.swift */,
+				6CDC13481D497FC300843BF1 /* Errors.swift */,
+				6CDC13491D497FC300843BF1 /* Mappable.swift */,
+				6CDC134A1D497FC300843BF1 /* Mapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		6CDC13531D49876300843BF1 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13541D49879400843BF1 /* NTAnnotation.swift */,
+				6CDC13561D49884900843BF1 /* NTAnnotationView.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		6CDC135E1D4A02C400843BF1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13641D4A046600843BF1 /* Utils */,
+				6CDC135F1D4A02E400843BF1 /* Extensions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6CDC135F1D4A02E400843BF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13601D4A030500843BF1 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6CDC13641D4A046600843BF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6CDC13651D4A048400843BF1 /* AlertControllerUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F67710D8300B821CF984B39C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4532DB84CB2112C55A00197B /* Pods-Natura.debug.xcconfig */,
+				CFDC0E98E383FC512E9B134E /* Pods-Natura.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CDC12F41D48ABFA00843BF1 /* Natura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CDC13211D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "Natura" */;
+			buildPhases = (
+				CCFEDB7F7314E92F224871C6 /* Check Pods Manifest.lock */,
+				6CDC12F11D48ABFA00843BF1 /* Sources */,
+				6CDC12F21D48ABFA00843BF1 /* Frameworks */,
+				6CDC12F31D48ABFA00843BF1 /* Resources */,
+				F12DCA27C895578F498E6D99 /* Embed Pods Frameworks */,
+				A21BC74C70A120E9FED0FB5A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Natura;
+			productName = Natura;
+			productReference = 6CDC12F51D48ABFA00843BF1 /* Natura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CDC130C1D48ABFA00843BF1 /* NaturaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CDC13241D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "NaturaTests" */;
+			buildPhases = (
+				6CDC13091D48ABFA00843BF1 /* Sources */,
+				6CDC130A1D48ABFA00843BF1 /* Frameworks */,
+				6CDC130B1D48ABFA00843BF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CDC130F1D48ABFA00843BF1 /* PBXTargetDependency */,
+			);
+			name = NaturaTests;
+			productName = NaturaTests;
+			productReference = 6CDC130D1D48ABFA00843BF1 /* NaturaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CDC13171D48ABFA00843BF1 /* NaturaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CDC13271D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "NaturaUITests" */;
+			buildPhases = (
+				6CDC13141D48ABFA00843BF1 /* Sources */,
+				6CDC13151D48ABFA00843BF1 /* Frameworks */,
+				6CDC13161D48ABFA00843BF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CDC131A1D48ABFA00843BF1 /* PBXTargetDependency */,
+			);
+			name = NaturaUITests;
+			productName = NaturaUITests;
+			productReference = 6CDC13181D48ABFA00843BF1 /* NaturaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CDC12ED1D48ABFA00843BF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = natura;
+				TargetAttributes = {
+					6CDC12F41D48ABFA00843BF1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KEAT465NMH;
+					};
+					6CDC130C1D48ABFA00843BF1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6CDC12F41D48ABFA00843BF1;
+					};
+					6CDC13171D48ABFA00843BF1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6CDC12F41D48ABFA00843BF1;
+					};
+				};
+			};
+			buildConfigurationList = 6CDC12F01D48ABFA00843BF1 /* Build configuration list for PBXProject "Natura" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CDC12EC1D48ABFA00843BF1;
+			productRefGroup = 6CDC12F61D48ABFA00843BF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CDC12F41D48ABFA00843BF1 /* Natura */,
+				6CDC130C1D48ABFA00843BF1 /* NaturaTests */,
+				6CDC13171D48ABFA00843BF1 /* NaturaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CDC12F31D48ABFA00843BF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDC13071D48ABFA00843BF1 /* LaunchScreen.storyboard in Resources */,
+				6CDC13041D48ABFA00843BF1 /* Assets.xcassets in Resources */,
+				6CDC13021D48ABFA00843BF1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC130B1D48ABFA00843BF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC13161D48ABFA00843BF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A21BC74C70A120E9FED0FB5A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Natura/Pods-Natura-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFEDB7F7314E92F224871C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F12DCA27C895578F498E6D99 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Natura/Pods-Natura-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CDC12F11D48ABFA00843BF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDC133D1D48B5AB00843BF1 /* APIKeys.swift in Sources */,
+				6CDC13571D49884900843BF1 /* NTAnnotationView.swift in Sources */,
+				6CDC13551D49879400843BF1 /* NTAnnotation.swift in Sources */,
+				6CDC135D1D4A002900843BF1 /* AlbumPhoto.swift in Sources */,
+				6CDC13611D4A030500843BF1 /* String+Extensions.swift in Sources */,
+				6CDC13501D49800300843BF1 /* Location.swift in Sources */,
+				6CDC13661D4A048400843BF1 /* AlertControllerUtil.swift in Sources */,
+				6CDC13591D49F95D00843BF1 /* FacebookLogin.swift in Sources */,
+				6CDC13421D48BA5E00843BF1 /* RequestBase.swift in Sources */,
+				6CDC135B1D49FA0300843BF1 /* UserFacebook.swift in Sources */,
+				6CDC13521D4980B100843BF1 /* Place.swift in Sources */,
+				6CDC13321D48AC8D00843BF1 /* MapViewController.swift in Sources */,
+				6CDC134B1D497FC300843BF1 /* Convertible.swift in Sources */,
+				6CDC134E1D497FC300843BF1 /* Mapper.swift in Sources */,
+				6CDC134C1D497FC300843BF1 /* Errors.swift in Sources */,
+				6CDC13631D4A03CA00843BF1 /* NotificationBase.swift in Sources */,
+				6CDC133E1D48B5AB00843BF1 /* Endpoints.swift in Sources */,
+				6CDC12F91D48ABFA00843BF1 /* AppDelegate.swift in Sources */,
+				6CDC134D1D497FC300843BF1 /* Mappable.swift in Sources */,
+				6CDC13441D48BF5700843BF1 /* GPlacesRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC13091D48ABFA00843BF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDC13121D48ABFA00843BF1 /* NaturaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CDC13141D48ABFA00843BF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDC131D1D48ABFA00843BF1 /* NaturaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CDC130F1D48ABFA00843BF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CDC12F41D48ABFA00843BF1 /* Natura */;
+			targetProxy = 6CDC130E1D48ABFA00843BF1 /* PBXContainerItemProxy */;
+		};
+		6CDC131A1D48ABFA00843BF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CDC12F41D48ABFA00843BF1 /* Natura */;
+			targetProxy = 6CDC13191D48ABFA00843BF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6CDC13001D48ABFA00843BF1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDC13011D48ABFA00843BF1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CDC13051D48ABFA00843BF1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDC13061D48ABFA00843BF1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CDC131F1D48ABFA00843BF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CDC13201D48ABFA00843BF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CDC13221D48ABFA00843BF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4532DB84CB2112C55A00197B /* Pods-Natura.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Natura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.Natura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6CDC13231D48ABFA00843BF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFDC0E98E383FC512E9B134E /* Pods-Natura.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Natura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.Natura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6CDC13251D48ABFA00843BF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NaturaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.NaturaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Natura.app/Natura";
+			};
+			name = Debug;
+		};
+		6CDC13261D48ABFA00843BF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NaturaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.NaturaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Natura.app/Natura";
+			};
+			name = Release;
+		};
+		6CDC13281D48ABFA00843BF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NaturaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.NaturaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Natura;
+			};
+			name = Debug;
+		};
+		6CDC13291D48ABFA00843BF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NaturaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.natura.NaturaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Natura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CDC12F01D48ABFA00843BF1 /* Build configuration list for PBXProject "Natura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDC131F1D48ABFA00843BF1 /* Debug */,
+				6CDC13201D48ABFA00843BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CDC13211D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "Natura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDC13221D48ABFA00843BF1 /* Debug */,
+				6CDC13231D48ABFA00843BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CDC13241D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "NaturaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDC13251D48ABFA00843BF1 /* Debug */,
+				6CDC13261D48ABFA00843BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CDC13271D48ABFA00843BF1 /* Build configuration list for PBXNativeTarget "NaturaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDC13281D48ABFA00843BF1 /* Debug */,
+				6CDC13291D48ABFA00843BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CDC12ED1D48ABFA00843BF1 /* Project object */;
+}
