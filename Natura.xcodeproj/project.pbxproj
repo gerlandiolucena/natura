@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7066D21D4A22D000F53C2A /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D11D4A22D000F53C2A /* UIView+Rounded.swift */; };
+		1C7066D51D4A23A000F53C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D41D4A23A000F53C2A /* LoginViewController.swift */; };
+		1C7066D81D4A29A400F53C2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D71D4A29A400F53C2A /* User.swift */; };
+		1C7066DA1D4A33F400F53C2A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D91D4A33F400F53C2A /* FilterViewController.swift */; };
+		1C7066DC1D4A371B00F53C2A /* PlacesTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066DB1D4A371B00F53C2A /* PlacesTypesEnum.swift */; };
 		6CDC12F91D48ABFA00843BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */; };
 		6CDC13021D48ABFA00843BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13001D48ABFA00843BF1 /* Main.storyboard */; };
 		6CDC13041D48ABFA00843BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13031D48ABFA00843BF1 /* Assets.xcassets */; };
@@ -54,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C7066D11D4A22D000F53C2A /* UIView+Rounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
+		1C7066D41D4A23A000F53C2A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1C7066D71D4A29A400F53C2A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C7066D91D4A33F400F53C2A /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		1C7066DB1D4A371B00F53C2A /* PlacesTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesTypesEnum.swift; path = Constants/PlacesTypesEnum.swift; sourceTree = "<group>"; };
 		3A51775A2C76344327465E27 /* Pods_Natura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Natura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4532DB84CB2112C55A00197B /* Pods-Natura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Natura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Natura/Pods-Natura.debug.xcconfig"; sourceTree = "<group>"; };
 		6CDC12F51D48ABFA00843BF1 /* Natura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natura.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7066D31D4A238700F53C2A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1C7066D41D4A23A000F53C2A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		6CDC12EC1D48ABFA00843BF1 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +213,9 @@
 		6CDC132C1D48AC3000843BF1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C7066D31D4A238700F53C2A /* Login */,
 				6CDC132F1D48AC8D00843BF1 /* MapViewController.swift */,
+				1C7066D91D4A33F400F53C2A /* FilterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +235,7 @@
 				6CDC133B1D48B5AB00843BF1 /* APIKeys.swift */,
 				6CDC133C1D48B5AB00843BF1 /* Endpoints.swift */,
 				6CDC13621D4A03CA00843BF1 /* NotificationBase.swift */,
+				1C7066DB1D4A371B00F53C2A /* PlacesTypesEnum.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -232,6 +253,7 @@
 		6CDC13401D48BA2200843BF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C7066D71D4A29A400F53C2A /* User.swift */,
 				6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */,
 				6CDC134F1D49800300843BF1 /* Location.swift */,
 				6CDC13511D4980B100843BF1 /* Place.swift */,
@@ -282,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				6CDC13601D4A030500843BF1 /* String+Extensions.swift */,
+				1C7066D11D4A22D000F53C2A /* UIView+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,6 +339,7 @@
 				6CDC12F31D48ABFA00843BF1 /* Resources */,
 				F12DCA27C895578F498E6D99 /* Embed Pods Frameworks */,
 				A21BC74C70A120E9FED0FB5A /* Copy Pods Resources */,
+				1C7066D61D4A271500F53C2A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -374,7 +398,7 @@
 				TargetAttributes = {
 					6CDC12F41D48ABFA00843BF1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = KEAT465NMH;
+						DevelopmentTeam = L2B57UYMNM;
 					};
 					6CDC130C1D48ABFA00843BF1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -434,6 +458,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C7066D61D4A271500F53C2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 449a9da16d2bf03afd1c2305c504fe8fef5507c9 f446e86ee8a9b345ca04ee34e2ae0197855ad034a306a0a3548b9c4422e0bbc6";
+		};
 		A21BC74C70A120E9FED0FB5A /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,7 +531,9 @@
 				6CDC13501D49800300843BF1 /* Location.swift in Sources */,
 				6CDC13661D4A048400843BF1 /* AlertControllerUtil.swift in Sources */,
 				6CDC13591D49F95D00843BF1 /* FacebookLogin.swift in Sources */,
+				1C7066D21D4A22D000F53C2A /* UIView+Rounded.swift in Sources */,
 				6CDC13421D48BA5E00843BF1 /* RequestBase.swift in Sources */,
+				1C7066D51D4A23A000F53C2A /* LoginViewController.swift in Sources */,
 				6CDC135B1D49FA0300843BF1 /* UserFacebook.swift in Sources */,
 				6CDC13521D4980B100843BF1 /* Place.swift in Sources */,
 				6CDC13321D48AC8D00843BF1 /* MapViewController.swift in Sources */,
@@ -502,10 +541,13 @@
 				6CDC134E1D497FC300843BF1 /* Mapper.swift in Sources */,
 				6CDC134C1D497FC300843BF1 /* Errors.swift in Sources */,
 				6CDC13631D4A03CA00843BF1 /* NotificationBase.swift in Sources */,
+				1C7066DA1D4A33F400F53C2A /* FilterViewController.swift in Sources */,
 				6CDC133E1D48B5AB00843BF1 /* Endpoints.swift in Sources */,
 				6CDC12F91D48ABFA00843BF1 /* AppDelegate.swift in Sources */,
+				1C7066DC1D4A371B00F53C2A /* PlacesTypesEnum.swift in Sources */,
 				6CDC134D1D497FC300843BF1 /* Mappable.swift in Sources */,
 				6CDC13441D48BF5700843BF1 /* GPlacesRequest.swift in Sources */,
+				1C7066D81D4A29A400F53C2A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

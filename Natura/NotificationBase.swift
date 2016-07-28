@@ -14,5 +14,6 @@ struct NotificationBase {
     FacebookInvitableFriends = "facebookInvitable",
     FacebookInApp = "facebookInApp",
     FacebookAlbum = "facebookAlbum",
-    FacebookFotosAlbum = "facebookFotosAlbum"
+    FacebookFotosAlbum = "facebookFotosAlbum",
+    FilteredPlaces = "filteredPlace"
 }

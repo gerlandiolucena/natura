@@ -14,10 +14,13 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var 	mapView: MKMapView!
     let locationManager = CLLocationManager()
+    var lastKnownLocation = CLLocationCoordinate2D()
+    var typeFilter = PlacesTypesEnum.Restaurant.nameOption()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationListener()
+        listenTo(NotificationBase.FilteredPlaces, call: #selector(filterReceived))
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +31,12 @@ class MapViewController: UIViewController {
 extension MapViewController {
 
     func requestPlaces(location: String) {
-        GPlacesRequest().getPlacesNear(location, type: "restaurant") { (response, error) in
+        GPlacesRequest().getPlacesNear(location, type: typeFilter) { (response, error) in
             //Oque fazer
+            if self.mapView.annotations.count > 0 {
+                self.mapView.removeAnnotations(self.mapView.annotations)
+            }
+            
             if let places = response as? Places where error == nil {
                 for place in places.places ?? [Place]() {
                     let coordinates = CLLocationCoordinate2D(latitude: place.geometry?.lat ?? 0.0, longitude: place.geometry?.lng ?? 0.0)
@@ -46,15 +53,28 @@ extension MapViewController {
         locationManager.distanceFilter = 500
         locationManager.requestWhenInUseAuthorization()
     }
+    
+    @IBAction func showFilter(sender: AnyObject) {
+        performSegueWithIdentifier("homeFilterSegue", sender: nil)
+    }
+    
+    func filterReceived(type: AnyObject) {
+        if let notification = type as? NSNotification, indexValue = notification.object as? Int {
+            typeFilter = PlacesTypesEnum(rawValue: indexValue)?.nameOption() ?? ""
+        }
+        
+        let stringLocation = "\(lastKnownLocation.latitude), \(lastKnownLocation.longitude)"
+        requestPlaces(stringLocation)
+    }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //TODO: Change Location
         
         if let location = locations.first {
-            let stringLocation = "\(location.coordinate.latitude), \(location.coordinate.longitude)"
+            lastKnownLocation = location.coordinate
+            let stringLocation = "\(lastKnownLocation.latitude), \(lastKnownLocation.longitude)"
             requestPlaces(stringLocation)
             zoomInLocation(location)
         }
@@ -91,6 +111,9 @@ extension MapViewController: MKMapViewDelegate {
                 let imageView = UIImageView()
                 imageView.af_setImageWithURL(url)
                 imageView.frame = CGRectMake(0.0, 0.0, 30.0, 30.0)
+                for view in imageAnnotation?.subviews ?? [UIView]() {
+                    view.removeFromSuperview()
+                }
                 imageAnnotation?.addSubview(imageView)
                 imageAnnotation?.canShowCallout = true
                 return imageAnnotation

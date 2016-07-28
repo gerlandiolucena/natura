@@ -9,23 +9,27 @@
 import UIKit
 import FBSDKLoginKit
 
-class FacebookLogin: RequestBase {
-    
+class FacebookLogin: NSObject {
+
     func fbSDKLogin(fromView: UIViewController, callback: defaultResponse) {
         FBSDKLoginManager().logInWithReadPermissions(["public_profile", "email", "user_friends", "user_photos"], fromViewController: fromView) { (loginResult, error) in
+            
             if error != nil {
+                
                 callback(response: "Não foi possível fazer o login.", error: "Erro ao logar")
-                AlertControllerUtil.showAlertOK(fromView, title: "Ops, Login Facebook :(", message: "Não foi possível efetuar seu login através do Facebook, tente novamente mais tarde.", handler: nil)
+                
             } else if (loginResult.isCancelled) {
+                
                 callback(response: "Não foi possível fazer o login, a operação foi cancelada.", error: "Operação cancelada")
                 
-                //Not sure if the view interaction should be here, maybe transfer to ViewController is the best choice
-                AlertControllerUtil.showAlertOK(fromView, title: "Ops, Login Facebook :(", message: "Não foi possível efetuar seu login através do Facebook, a operação foi cancelada antes de ser concluída.", handler: nil)
             } else {
+                
                 NotificationBase.FacebookLogged.notifyWithObject(loginResult)
+                
                 if let token = FBSDKAccessToken.currentAccessToken().tokenString where token != "" {
                     callback(response: "Login realizado com sucesso.", error: nil)
                 }
+                
             }
         }
     }
