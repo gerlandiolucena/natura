@@ -12,6 +12,9 @@
 		1C7066D81D4A29A400F53C2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D71D4A29A400F53C2A /* User.swift */; };
 		1C7066DA1D4A33F400F53C2A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066D91D4A33F400F53C2A /* FilterViewController.swift */; };
 		1C7066DC1D4A371B00F53C2A /* PlacesTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7066DB1D4A371B00F53C2A /* PlacesTypesEnum.swift */; };
+		6C14EE971D4CEB6A00600219 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14EE961D4CEB6A00600219 /* NewPlaceViewController.swift */; };
+		6C14EE991D4CFED400600219 /* StaticMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14EE981D4CFED400600219 /* StaticMap.swift */; };
+		6C14EE9B1D4D231500600219 /* UserFriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14EE9A1D4D231500600219 /* UserFriendsListViewController.swift */; };
 		6CDC12F91D48ABFA00843BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */; };
 		6CDC13021D48ABFA00843BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13001D48ABFA00843BF1 /* Main.storyboard */; };
 		6CDC13041D48ABFA00843BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC13031D48ABFA00843BF1 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 		1C7066DB1D4A371B00F53C2A /* PlacesTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesTypesEnum.swift; path = Constants/PlacesTypesEnum.swift; sourceTree = "<group>"; };
 		3A51775A2C76344327465E27 /* Pods_Natura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Natura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4532DB84CB2112C55A00197B /* Pods-Natura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Natura.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Natura/Pods-Natura.debug.xcconfig"; sourceTree = "<group>"; };
+		6C14EE961D4CEB6A00600219 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		6C14EE981D4CFED400600219 /* StaticMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticMap.swift; sourceTree = "<group>"; };
+		6C14EE9A1D4D231500600219 /* UserFriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsListViewController.swift; sourceTree = "<group>"; };
 		6CDC12F51D48ABFA00843BF1 /* Natura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDC12F81D48ABFA00843BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CDC13011D48ABFA00843BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 				1C7066D31D4A238700F53C2A /* Login */,
 				6CDC132F1D48AC8D00843BF1 /* MapViewController.swift */,
 				1C7066D91D4A33F400F53C2A /* FilterViewController.swift */,
+				6C14EE961D4CEB6A00600219 /* NewPlaceViewController.swift */,
+				6C14EE9A1D4D231500600219 /* UserFriendsListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 				6CDC134F1D49800300843BF1 /* Location.swift */,
 				6CDC13511D4980B100843BF1 /* Place.swift */,
 				6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */,
+				6C14EE981D4CFED400600219 /* StaticMap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,7 +407,7 @@
 				TargetAttributes = {
 					6CDC12F41D48ABFA00843BF1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = L2B57UYMNM;
+						DevelopmentTeam = KEAT465NMH;
 					};
 					6CDC130C1D48ABFA00843BF1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -526,7 +535,9 @@
 				6CDC133D1D48B5AB00843BF1 /* APIKeys.swift in Sources */,
 				6CDC13571D49884900843BF1 /* NTAnnotationView.swift in Sources */,
 				6CDC13551D49879400843BF1 /* NTAnnotation.swift in Sources */,
+				6C14EE9B1D4D231500600219 /* UserFriendsListViewController.swift in Sources */,
 				6CDC135D1D4A002900843BF1 /* AlbumPhoto.swift in Sources */,
+				6C14EE991D4CFED400600219 /* StaticMap.swift in Sources */,
 				6CDC13611D4A030500843BF1 /* String+Extensions.swift in Sources */,
 				6CDC13501D49800300843BF1 /* Location.swift in Sources */,
 				6CDC13661D4A048400843BF1 /* AlertControllerUtil.swift in Sources */,
@@ -536,6 +547,7 @@
 				1C7066D51D4A23A000F53C2A /* LoginViewController.swift in Sources */,
 				6CDC135B1D49FA0300843BF1 /* UserFacebook.swift in Sources */,
 				6CDC13521D4980B100843BF1 /* Place.swift in Sources */,
+				6C14EE971D4CEB6A00600219 /* NewPlaceViewController.swift in Sources */,
 				6CDC13321D48AC8D00843BF1 /* MapViewController.swift in Sources */,
 				6CDC134B1D497FC300843BF1 /* Convertible.swift in Sources */,
 				6CDC134E1D497FC300843BF1 /* Mapper.swift in Sources */,

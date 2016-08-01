@@ -91,10 +91,10 @@ class FacebookLogin: NSObject {
                     let usingFriendsList = try FriendsList(map: Mapper(json: responseDictionary))
                     NotificationBase.FacebookInApp.notifyWithObject(usingFriendsList)
                 } catch let errorCast as NSError {
-                    NotificationBase.FacebookTaggedFriends.notifyWithObject(["Error":errorCast, "Message": "Não foi possível consultar os amigos do usuário"])
+                    NotificationBase.FacebookInApp.notifyWithObject(["Error":errorCast, "Message": "Não foi possível consultar os amigos do usuário"])
                 }
             } else {
-                NotificationBase.FacebookTaggedFriends.notifyWithObject(["Error":"Não foi possível converter o resultado para o tipo necessário", "Message": "Não foi possível consultar os amigos do usuário"])
+                NotificationBase.FacebookInApp.notifyWithObject(["Error":"Não foi possível converter o resultado para o tipo necessário", "Message": "Não foi possível consultar os amigos do usuário"])
             }
         }
     }
@@ -112,10 +112,10 @@ class FacebookLogin: NSObject {
                     let invitableFriendsList = try FriendsList(map: Mapper(json: responseDictionary))
                     NotificationBase.FacebookInvitableFriends.notifyWithObject(invitableFriendsList)
                 } catch let errorCast as NSError {
-                    NotificationBase.FacebookTaggedFriends.notifyWithObject(["Error":errorCast, "Message": "Não foi possível consultar os amigos do usuário"])
+                    NotificationBase.FacebookInvitableFriends.notifyWithObject(["Error":errorCast, "Message": "Não foi possível consultar os amigos do usuário"])
                 }
             } else {
-                NotificationBase.FacebookTaggedFriends.notifyWithObject(["Error":"Não foi possível converter o resultado para o tipo necessário", "Message": "Não foi possível consultar os amigos do usuário"])
+                NotificationBase.FacebookInvitableFriends.notifyWithObject(["Error":"Não foi possível converter o resultado para o tipo necessário", "Message": "Não foi possível consultar os amigos do usuário"])
             }
         }
     }

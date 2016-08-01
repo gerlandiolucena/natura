@@ -11,4 +11,5 @@ import Foundation
 struct Endpoints {
     
     var googleMapsPlaces = "https://maps.googleapis.com/maps/api/place/search/json"
+    var googleStaticMaps = "https://maps.googleapis.com/maps/api/staticmap"
 }

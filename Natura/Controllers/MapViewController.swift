@@ -28,6 +28,8 @@ class MapViewController: UIViewController {
     }
 }
 
+    //MARK: - Setups and main requests
+
 extension MapViewController {
 
     func requestPlaces(location: String) {
@@ -68,6 +70,8 @@ extension MapViewController {
     }
 }
 
+    //MARK: - Location delegates
+
 extension MapViewController: CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -96,7 +100,10 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
+    //MARK: - Map interactions
+
 extension MapViewController: MKMapViewDelegate {
+    
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         var imageAnnotation = mapView.dequeueReusableAnnotationViewWithIdentifier("ntAnnotation")
         
@@ -116,9 +123,35 @@ extension MapViewController: MKMapViewDelegate {
                 }
                 imageAnnotation?.addSubview(imageView)
                 imageAnnotation?.canShowCallout = true
+                imageAnnotation?.enabled = true
                 return imageAnnotation
             }
         }
         return imageAnnotation!
+    }
+    
+    @IBAction func longPressOnMap(recognizer: UIGestureRecognizer){
+        if (recognizer.state == .Began) {
+            let touchPoint = recognizer.locationInView(self.mapView)
+            let coordinate = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+            self.performSegueWithIdentifier("mapAddPlaceSegue", sender: ["latitude": coordinate.latitude, "longitude": coordinate.longitude])
+        }
+    }
+}
+
+    //MARK: - Navigation actions
+
+extension MapViewController {
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? NewPlaceViewController {
+            guard let dictLocation = sender as? NSDictionary else {
+                return
+            }
+            
+            if let latitude = dictLocation["latitude"] as? Double, longitude = dictLocation["longitude"] as? Double {
+                destination.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            }
+        }
     }
 }
