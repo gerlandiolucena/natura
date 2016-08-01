@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     var lastKnownLocation = CLLocationCoordinate2D()
     var typeFilter = PlacesTypesEnum.Restaurant.nameOption()
+    var userChangedMap = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +129,23 @@ extension MapViewController: MKMapViewDelegate {
             }
         }
         return imageAnnotation!
+    }
+    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        if(fromUserInteration()) {
+            let stringLocation = "\(mapView.centerCoordinate.latitude), \(mapView.centerCoordinate.longitude)"
+            requestPlaces(stringLocation)
+        }
+    }
+    
+    private func fromUserInteration() -> Bool {
+        if let subView = self.mapView.subviews.first {
+            if let gesture = subView.gestureRecognizers, _ = gesture.filter({$0.state == .Began || $0.state == .Ended }).first {
+                return true
+            }
+        }
+        
+        return false
     }
     
     @IBAction func longPressOnMap(recognizer: UIGestureRecognizer){

@@ -8,9 +8,6 @@
 
 import UIKit
 
-import UIKit
-import FBSDKLoginKit
-import FBSDKShareKit
 
 class UserFriendsListViewController: UIViewController {
     
@@ -19,6 +16,7 @@ class UserFriendsListViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var invitableFriendsList: FriendsList?
     var usingFriendsList: FriendsList?
+    var usersSelected = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +36,10 @@ extension UserFriendsListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let currentSize = currentList()?.friendsList?.count ?? 0
         
+        labelMessage.hidden = true
+        
         if currentSize <= 0 {
-            labelMessage.hidden = true
+            labelMessage.hidden = false
         }
         
         return currentSize
@@ -47,20 +47,33 @@ extension UserFriendsListViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "Cell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier)
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
-        
-        if cell == nil {
-            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: identifier)
+        if let cellUser = cell as? UserImageCell, userFacebook = currentList()?.friendsList?[indexPath.row] {
+            cellUser.facebookFriend = userFacebook
+            cellUser.accessoryType = userSelected(userFacebook) ? .Checkmark : .None
+            return cellUser
         }
-        
-        cell?.textLabel?.text = currentList()?.friendsList?[indexPath.row].name
-        if let url = NSURL(string: currentList()?.friendsList?[indexPath.row].pictureURL ?? "") {
-            cell?.imageView?.af_setImageWithURL(url)
-        }
-        cell?.detailTextLabel?.text = currentList()?.friendsList?[indexPath.row].email
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var acessoryType = UITableViewCellAccessoryType.None
+        
+        if let userFacebook = currentList()?.friendsList?[indexPath.row] {
+            if userSelected(userFacebook) == false {
+                usersSelected.append(userFacebook.id!)
+                acessoryType = .Checkmark
+            } else if let index = usersSelected.indexOf({$0 == userFacebook.id}){
+                usersSelected.removeAtIndex(index)
+            }
+        }
+        
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            cell.accessoryType = acessoryType
+        }
     }
 }
 
@@ -120,6 +133,7 @@ extension UserFriendsListViewController {
     func loadFrientsOnApp(sender: NSNotification?) {
         if let friendListObject = sender?.object as? FriendsList {
             usingFriendsList = friendListObject
+            labelMessage.hidden = true
             if usingFriendsList?.friendsList?.count <= 0 {
                 labelMessage.hidden = false
             } else {
@@ -131,21 +145,47 @@ extension UserFriendsListViewController {
     func loadInvitableFriends(sender: NSNotification?) {
         if let friendListObject = sender?.object as? FriendsList {
             invitableFriendsList = friendListObject
+            labelMessage.hidden = true
             if invitableFriendsList?.friendsList?.count <= 0 {
-                labelMessage.hidden = true
+                labelMessage.hidden = false
+            } else {
+                tableView.reloadData()
             }
         }
+    }
+    
+    func userSelected(userFacebook: UserFacebook) -> Bool {
+        if usersSelected.contains({ $0 == userFacebook.id }) {
+            return true
+        }
+        
+        return false
     }
 }
 
     //MARK: - ViewController Actions
+
 extension UserFriendsListViewController {
     
     @IBAction func segmentedControlChanged(sender: AnyObject) {
+        usersSelected = [String]()
         tableView.reloadData()
     }
     
-    @IBAction func dismissViewController(sender: AnyObject) {
-        dismissViewController(true)
+    @IBAction func dismissController(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func selectedFriends() {
+        var listOfFriends = [UserFacebook]()
+        
+        for idUser in usersSelected {
+            if let userFriend = currentList()?.friendsList?.filter({$0.id == idUser}).first {
+                listOfFriends.append(userFriend)
+            }
+        }
+        
+        NotificationBase.SelectFriends.notifyWithObject(listOfFriends)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -25,19 +25,25 @@ class NewPlaceViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setupLocationStaticMap()
+        setupListeners()
     }
 }
 
     //MARK: - ViewController Actions
 
 extension NewPlaceViewController {
+    
     @IBAction func dismissMe(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func confirmPlace(sender: AnyObject) {
+        
+    }
 }
 
-
     //MARK: - TextField Delegate
+
 extension NewPlaceViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -47,8 +53,8 @@ extension NewPlaceViewController: UITextFieldDelegate {
     }
 }
 
-
     //MARK: - SetupView
+
 extension NewPlaceViewController {
     
     func setupLocationStaticMap() {
@@ -62,4 +68,24 @@ extension NewPlaceViewController {
             mapImage.af_setImageWithURL(url.URL!)
         }
     }
+}
+
+    //MARK: - Notification Listener
+
+extension NewPlaceViewController {
+    
+    func setupListeners() {
+        listenTo(NotificationBase.SelectFriends, call: #selector(selectedFrients(_:)))
+    }
+    
+    func selectedFrients(sender: NSNotification?) {
+        var friendsName = ""
+        if let friendListObject = sender?.object as? [UserFacebook] {
+            for friend in friendListObject {
+                friendsName = "\(friend.name ?? ""), \(friendsName)"
+            }
+        }
+        friendListText.text = friendsName
+    }
+
 }
