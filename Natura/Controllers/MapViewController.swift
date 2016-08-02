@@ -65,8 +65,14 @@ extension MapViewController {
         if let notification = type as? NSNotification, indexValue = notification.object as? Int {
             typeFilter = PlacesTypesEnum(rawValue: indexValue)?.nameOption() ?? ""
         }
+        var stringLocation = ""
         
-        let stringLocation = "\(lastKnownLocation.latitude), \(lastKnownLocation.longitude)"
+        if lastKnownLocation.latitude != CLLocationCoordinate2D().latitude && lastKnownLocation.longitude != CLLocationCoordinate2D().longitude {
+            stringLocation = "\(lastKnownLocation.latitude), \(lastKnownLocation.longitude)"
+        } else {
+            stringLocation = "\(self.mapView.centerCoordinate.latitude), \(self.mapView.centerCoordinate.longitude)"
+        }
+        
         requestPlaces(stringLocation)
     }
 }
@@ -82,6 +88,7 @@ extension MapViewController: CLLocationManagerDelegate {
             let stringLocation = "\(lastKnownLocation.latitude), \(lastKnownLocation.longitude)"
             requestPlaces(stringLocation)
             zoomInLocation(location)
+            locationManager.stopUpdatingLocation()
         }
     }
     
