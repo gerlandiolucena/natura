@@ -25,7 +25,7 @@ class UserFriendsListViewController: UIViewController {
     }
 }
 
-//MARK: - Table friend and contact list
+    //MARK: - Table friend and contact list
 
 extension UserFriendsListViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -77,7 +77,7 @@ extension UserFriendsListViewController: UITableViewDelegate, UITableViewDataSou
     }
 }
 
-//MARK: Load friend list table
+    //MARK: - Load friend list table
 
 extension UserFriendsListViewController {
     

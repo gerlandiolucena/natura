@@ -35,7 +35,6 @@
 		6CDC13501D49800300843BF1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC134F1D49800300843BF1 /* Location.swift */; };
 		6CDC13521D4980B100843BF1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13511D4980B100843BF1 /* Place.swift */; };
 		6CDC13551D49879400843BF1 /* NTAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13541D49879400843BF1 /* NTAnnotation.swift */; };
-		6CDC13571D49884900843BF1 /* NTAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13561D49884900843BF1 /* NTAnnotationView.swift */; };
 		6CDC13591D49F95D00843BF1 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC13581D49F95D00843BF1 /* FacebookLogin.swift */; };
 		6CDC135B1D49FA0300843BF1 /* UserFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */; };
 		6CDC135D1D4A002900843BF1 /* AlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */; };
@@ -99,7 +98,6 @@
 		6CDC134F1D49800300843BF1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6CDC13511D4980B100843BF1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		6CDC13541D49879400843BF1 /* NTAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAnnotation.swift; sourceTree = "<group>"; };
-		6CDC13561D49884900843BF1 /* NTAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAnnotationView.swift; sourceTree = "<group>"; };
 		6CDC13581D49F95D00843BF1 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		6CDC135A1D49FA0300843BF1 /* UserFacebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFacebook.swift; sourceTree = "<group>"; };
 		6CDC135C1D4A002900843BF1 /* AlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhoto.swift; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				6CDC13541D49879400843BF1 /* NTAnnotation.swift */,
-				6CDC13561D49884900843BF1 /* NTAnnotationView.swift */,
 			);
 			path = Annotations;
 			sourceTree = "<group>";
@@ -544,7 +541,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDC133D1D48B5AB00843BF1 /* APIKeys.swift in Sources */,
-				6CDC13571D49884900843BF1 /* NTAnnotationView.swift in Sources */,
 				6CDC13551D49879400843BF1 /* NTAnnotation.swift in Sources */,
 				6C14EE9B1D4D231500600219 /* UserFriendsListViewController.swift in Sources */,
 				6CDC135D1D4A002900843BF1 /* AlbumPhoto.swift in Sources */,

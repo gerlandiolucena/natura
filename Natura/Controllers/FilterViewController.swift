@@ -21,6 +21,8 @@ class FilterViewController: UIViewController {
     }
 }
 
+    //MARK: - TableView list of filter options
+
 extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +56,8 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+    //MARK: - Search controller delegate
+
 extension FilterViewController: UISearchBarDelegate {
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
@@ -71,6 +75,8 @@ extension FilterViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
 }
+
+    //MARK: - User actions
 
 extension FilterViewController {
     

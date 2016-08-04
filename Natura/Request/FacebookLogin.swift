@@ -36,7 +36,7 @@ class FacebookLogin: NSObject {
     
     func fbSDKAlbum(albumID: String, callback: defaultResponse) {
         FBSDKGraphRequest(graphPath: "/\(albumID)", parameters: ["fields":""]).startWithCompletionHandler { (connection, result, error) in
-            //
+            //TODO: Implement request of 
         }
     }
     
